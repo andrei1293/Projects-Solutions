@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="taxCalculatorApp">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Tax Calculator</title>
+</head>
+<body ng-controller="taxCalculatorController">
+	<center>
+		<h2>Tax Calculator</h2>
+	</center>
+	<p>
+		<input class="form-control" ng-model="costValue" placeholder="Cost" />
+	</p>
+	<p>
+		<input class="form-control" ng-model="taxValue" placeholder="Tax, %" />
+	</p>
+	<p>
+    	<button class="btn btn-primary btn-block" ng-click="calculate(costValue, taxValue)">Calculate</button>
+    </p>
+    <p>
+		<input class="form-control" ng-model="totalCostValue" placeholder="Total cost" ng-readonly="true" />
+	</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="js/taxCalculatorController.js"></script>
+</body>
+</html>
